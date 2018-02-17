@@ -1,0 +1,15 @@
+@import "../shared/colors";
+
+.localClass {
+  background-color: $color-yellow;
+  width: 100px;
+  height: 100px;
+
+  p {
+      color: blue;
+  }
+}
+
+:global(.globalClass) {
+  background-color: pink;
+}

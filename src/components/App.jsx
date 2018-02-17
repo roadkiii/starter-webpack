@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './style.css';
+import styles from './style.scss';
 
 export default class App extends React.Component {
 
@@ -10,25 +10,11 @@ export default class App extends React.Component {
 
     return (
 
-      <div style={{textAlign: 'center'}}>
+      <div className={styles.localClass}>
 
-        <h1>Hello World</h1>
+        <p>hello</p>
 
-        <div>
-          <li className="dude"></li>
-        </div>
-        <div>
-          <li className="dude"></li>
-        </div>
-        <div>
-          <li className="dude"></li>
-        </div>
-        <div>
-          <li className="dude"></li>
-        </div>
-        <div>
-          <li className="dude"></li>
-        </div>
+        <p className="globalClass">should be pink</p>
       </div>);
   }
 }

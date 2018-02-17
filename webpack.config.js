@@ -27,7 +27,7 @@ module.exports = {
         loader : 'babel-loader'
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           {
             loader: "style-loader"
@@ -35,12 +35,18 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
+              sourceMap: true,
               importLoaders: 1,
               modules: true,
               localIdentName: "[name]__[local]___[hash:base64:5]"
             }
           },
-        ]
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true
+            }
+        }]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
