@@ -1,0 +1,7 @@
+/node_modules/
+npm-debug.log
+webpack.config.js
+/src/assets
+/src/style
+/dist
+**/*.css
