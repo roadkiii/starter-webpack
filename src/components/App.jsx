@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component, Fragment }  from 'react';
 import styles from './style.scss';
 
-export default class App extends React.Component {
+import { Button } from 'react-bootstrap';
+
+export default class App extends Component {
 
   render() {
 
@@ -10,11 +12,16 @@ export default class App extends React.Component {
 
     return (
 
-      <div className={styles.localClass}>
+      <Fragment>
+        <Button bsStyle='primary' bsSize='large'>bsbutton</Button>
 
-        <p>hello</p>
+        <div className={styles.localClass}>
 
-        <p className="globalClass">should be pink</p>
-      </div>);
+          <p>hello</p>
+          <Button bsStyle="danger">Hello</Button>
+          <p className="globalClass">should be pink</p>
+        </div>
+      </Fragment>
+    );
   }
 }
